@@ -10,7 +10,7 @@ function Items(props) {
           id={item.id}
           image={item.image}
           title={item.title}
-          address={item.address}
+          price={item.price}
           description={item.description}
         />
       ))}

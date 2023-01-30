@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react';
 
 const CartContext = createContext({
-  favorites: [],
-  totalFavorites: 0,
+  onCart: [],
+  totalOnCart: 0,
   addOnCart: (cartItem) => {},
   removeFromCart: (itemsId) => {},
   itemIsOnCart: (itemsId) => {}
@@ -28,8 +28,8 @@ export function CartContextProvider(props) {
   }
 
   const context = {
-    favorites: userCartItem,
-    totalFavorites: userCartItem.length,
+    onCart: userCartItem,
+    totalOnCart: userCartItem.length,
     addOnCart: addOnCartHandler,
     removeFromCart: removeFromCartHandler,
     itemIsOnCart: itemIsOnCartHandler

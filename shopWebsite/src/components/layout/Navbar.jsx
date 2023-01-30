@@ -22,7 +22,7 @@ function Navbar() {
 						<Link to="/cart">
 							My Cart
 							<span className={classes.badge}>
-								{itemCartCtx.totalItems}
+								{itemCartCtx.totalOnCart}
 							</span>
 						</Link>
 					</li>
