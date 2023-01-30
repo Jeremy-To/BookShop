@@ -9,13 +9,13 @@ function AllItemsPage() {
 	useEffect(() => {
 		setIsLoading(true);
 		fetch(
-			'https://react-f55c8-default-rtdb.europe-west1.firebasedatabase.app/Items.json'
+			'https://react-f55c8-default-rtdb.europe-west1.firebasedatabase.app/items.json'
 		)
 			.then((response) => {
 				return response.json();
 			})
 			.then((data) => {
-				const Items = [];
+				const items = [];
 
 				for (const key in data) {
 					const item = {
@@ -23,11 +23,11 @@ function AllItemsPage() {
 						...data[key],
 					};
 
-					Items.push(item);
+					items.push(item);
 				}
 
 				setIsLoading(false);
-				setLoadedItems(Items);
+				setLoadedItems(items);
 			});
 	}, []);
 

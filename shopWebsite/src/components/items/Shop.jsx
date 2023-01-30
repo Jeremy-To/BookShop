@@ -5,15 +5,15 @@ import classes from './Shop.module.css';
 import CartContext from '../../store/on-cart-context';
 
 function Shop(props) {
-	const itemOnCartCtx = useContext(CartContext);
+	const itemCtx = useContext(CartContext);
 
-	const itemIsOnCart = itemOnCartCtx.itemIsOnCart(props.id);
+	const itemIsOnCart = itemCtx.itemIsOnCart(props.id);
 
-	function toggleItemIsOnCartStatusHandler() {
+	function ItemIsOnCartHandler() {
 		if (itemIsOnCart) {
-			itemOnCartCtx.removeItem(props.id);
+			itemCtx.removeFromCart(props.id);
 		} else {
-			itemOnCartCtx.addItem({
+			itemCtx.addOnCart({
 				id: props.id,
 				title: props.title,
 				description: props.description,
@@ -31,11 +31,11 @@ function Shop(props) {
 				</div>
 				<div className={classes.content}>
 					<h3>{props.title}</h3>
-					<price>{props.price}</price>
+					<p>{props.price}</p>
 					<p>{props.description}</p>
 				</div>
 				<div className={classes.actions}>
-					<button onClick={toggleItemIsOnCartStatusHandler}>
+					<button onClick={ItemIsOnCartHandler}>
 						{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
 					</button>
 				</div>
