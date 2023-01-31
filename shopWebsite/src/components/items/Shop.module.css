@@ -30,9 +30,13 @@
 }
 
 .content h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+
   font-size: 1.25rem;
 }
 .content p {
+  margin-left: 10px;
   font-style: italic;
 }
 
