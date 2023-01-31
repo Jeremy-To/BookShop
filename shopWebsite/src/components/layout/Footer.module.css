@@ -1,0 +1,25 @@
+.main {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #abcdef;
+    padding: 0 10%;
+    bottom:0;
+}
+.contact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    text-decoration: none;
+    color: white;
+}
+.contact a:hover,
+.contact a:active,
+.contact a.active {
+  color: #111def;
+}

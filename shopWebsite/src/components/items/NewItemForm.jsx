@@ -28,7 +28,6 @@ function NewItemForm(props) {
   }
 
   return (
-    <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor='name'>Item Name</label>
@@ -55,7 +54,6 @@ function NewItemForm(props) {
           <button>Add Item</button>
         </div>
       </form>
-    </Card>
   );
 }
 

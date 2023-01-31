@@ -1,0 +1,26 @@
+.title {
+    display: flex;
+    justify-content: center; 
+    align-item: center;
+}
+.image {
+    display: flex;
+    flex: wrap; 
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+}
+.image img {
+    flex: fill;
+}
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    border: 2px;
+    background-color: white;
+    border-radius: 6px;
+}

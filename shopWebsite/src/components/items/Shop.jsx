@@ -31,14 +31,14 @@ function Shop(props) {
 				</div>
 				<div className={classes.content}>
 					<h3>{props.title}</h3>
-					<p>{props.price} $</p>
 					<p>{props.description}</p>
+					<b>{props.price} $</b>
 				</div>
 				<div className={classes.actions}>
-					<button onClick={ItemIsOnCartHandler}>
-						{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
-					</button>
-				</div>
+				<button onClick={ItemIsOnCartHandler}>
+					{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
+				</button>
+			</div>
 			</Card>
 		</li>
 	);

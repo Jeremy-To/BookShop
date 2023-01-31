@@ -9,11 +9,13 @@ function Navbar() {
 
 	return (
 		<header className={classes.header}>
-			<div className={classes.logo}>Shop</div>
+			<div className={classes.logo}>
+				<Link to="/">ShopApp</Link>
+			</div>
 			<nav>
 				<ul>
 					<li>
-						<Link to="/">Shop</Link>
+						<Link to="/shop">Shop</Link>
 					</li>
 					<li>
 						<Link to="/add-items">Add Item</Link>
@@ -21,9 +23,7 @@ function Navbar() {
 					<li>
 						<Link to="/cart">
 							My Cart
-							<span className={classes.badge}>
-								{itemCartCtx.totalOnCart}
-							</span>
+							<span className={classes.badge}>{itemCartCtx.totalOnCart}</span>
 						</Link>
 					</li>
 				</ul>
