@@ -11,7 +11,7 @@ function HomePage() {
                     <h2>The place to sell your books</h2>
 					<Link to="/shop">Go to store</Link>
 				</div>
-				<img src="./public/Library.jpg" alt="Image of a library shop" />
+				<img src="/Library.jpg" alt="Image of a library shop" />
 			</div>
 		</div>
 	);
