@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import Card from '../ui/Card';
 import classes from './Shop.module.css';
 import CartContext from '../../store/on-cart-context';
+import RemoveButton from './RemoveItem';
 
 function Shop(props) {
 	const itemCtx = useContext(CartContext);
@@ -38,7 +39,8 @@ function Shop(props) {
 				<button onClick={ItemIsOnCartHandler}>
 					{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
 				</button>
-			</div>
+				<RemoveButton itemId={props.id} />
+				</div>
 			</Card>
 		</li>
 	);

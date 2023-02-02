@@ -1,11 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-
 import AddItems from '../components/items/NewItemForm';
 
 function NewItemPage() {
 	const navigate = useNavigate();
-
 
 	function addItemHandler(meetupData) {
 		fetch(
@@ -18,7 +16,7 @@ function NewItemPage() {
 				},
 			}
 		).then(() => {
-			navigate('/');
+			navigate('/shop');
 		});
 	}
 
