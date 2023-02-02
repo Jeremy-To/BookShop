@@ -23,7 +23,7 @@ function Navbar() {
 					<li>
 						<Link to="/cart">
 							My Cart
-							<span className={classes.badge}>{itemCartCtx.totalOnCart}</span>
+							{itemCartCtx.totalOnCart > 0 && (<span className={classes.badge}>{itemCartCtx.totalOnCart}</span>)}
 						</Link>
 					</li>
 				</ul>

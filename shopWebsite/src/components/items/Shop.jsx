@@ -10,7 +10,7 @@ function Shop(props) {
 
 	const itemIsOnCart = itemCtx.itemIsOnCart(props.id);
 
-	function ItemIsOnCartHandler() {
+	const ItemIsOnCartHandler = () => {
 		if (itemIsOnCart) {
 			itemCtx.removeFromCart(props.id);
 		} else {
@@ -22,7 +22,8 @@ function Shop(props) {
 				price: props.price,
 			});
 		}
-	}
+	};
+
 
 	return (
 		<li className={classes.item}>
@@ -36,10 +37,10 @@ function Shop(props) {
 					<b>{props.price} $</b>
 				</div>
 				<div className={classes.actions}>
-				<button onClick={ItemIsOnCartHandler}>
-					{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
-				</button>
-				<RemoveButton itemId={props.id} />
+					<button onClick={ItemIsOnCartHandler}>
+						{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
+					</button>
+					<RemoveButton itemId={props.id}/>
 				</div>
 			</Card>
 		</li>
