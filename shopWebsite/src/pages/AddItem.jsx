@@ -22,7 +22,6 @@ function NewItemPage() {
 
 	return (
 		<section>
-			<h1>Add New Item</h1>
 			<AddItems onAddMeetup={addItemHandler} />
 		</section>
 	);

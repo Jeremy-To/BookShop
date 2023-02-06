@@ -1,11 +1,10 @@
-import Shop from './Shop';
-import classes from './Items.module.css';
+import Item from './Item';
 
 function Items(props) {
 	return (
-		<ul className={classes.list}>
+		<ul className="list-none m-0 p-0 flex justify-center items-center">
 			{props.items.map((item) => (
-					<Shop
+					<Item
 						key={item.id}
 						id={item.id}
 						image={item.image}

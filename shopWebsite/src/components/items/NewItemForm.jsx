@@ -1,7 +1,5 @@
 import { useRef } from 'react';
 
-import classes from './NewItemForm.module.css';
-
 function NewItemForm(props) {
 	const nameInputRef = useRef();
 	const imageInputRef = useRef();
@@ -27,30 +25,62 @@ function NewItemForm(props) {
 	}
 
 	return (
-		<form className={classes.form} onSubmit={submitHandler}>
-			<div className={classes.control}>
-				<label htmlFor="name">Item Name</label>
-				<input type="text" required id="name" ref={nameInputRef} />
+		<form
+			className="p-4 shadow flex flex-col justify-center items-center"
+			onSubmit={submitHandler}
+		>
+			<div className="mb-2">
+				<label className="font-bold mb-2" htmlFor="name">
+					Item Name
+				</label>
+				<input
+					className="block w-full p-0.25 rounded border border-gray-300 appearance-none leading-normal"
+					type="text"
+					required
+					id="name"
+					ref={nameInputRef}
+				/>
 			</div>
-			<div className={classes.control}>
-				<label htmlFor="image">Item Image</label>
-				<input type="url" required id="image" ref={imageInputRef} />
+			<div className="mb-2">
+				<label className="font-bold mb-2" htmlFor="image">
+					Item Image
+				</label>
+				<input
+					className="block w-full p-0.25 rounded border border-gray-300 appearance-none leading-normal"
+					type="url"
+					required
+					id="image"
+					ref={imageInputRef}
+				/>
 			</div>
-			<div className={classes.control}>
-				<label htmlFor="price">Price</label>
-				<input type="number" required id="price" ref={priceInputRef} />
+			<div className="mb-2">
+				<label className="font-bold mb-2" htmlFor="price">
+					Price
+				</label>
+				<input
+					className="block w-full p-0.25 rounded border border-gray-300 appearance-none leading-normal"
+					type="number"
+					required
+					id="price"
+					ref={priceInputRef}
+				/>
 			</div>
-			<div className={classes.control}>
-				<label htmlFor="description">Description</label>
+			<div className="mb-2">
+				<label className="font-bold mb-2" htmlFor="description">
+					Description
+				</label>
 				<textarea
+					className="block w-full p-0.25 rounded border border-gray-300 appearance-none leading-normal"
 					id="description"
 					required
 					rows="5"
 					ref={descriptionInputRef}
 				></textarea>
 			</div>
-			<div className={classes.actions}>
-				<button>Add Item</button>
+			<div className="mt-1 text-right">
+				<button className="bg-red-500 hover:bg-red-600 text-white font-bold py-0.5 px-1.5 rounded border border-red-500 cursor-pointer">
+					Add Item
+				</button>
 			</div>
 		</form>
 	);
