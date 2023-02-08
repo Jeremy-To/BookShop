@@ -5,7 +5,6 @@ function Layout(props) {
     <div className='w-full'>
       <Navbar />
       <main>{props.children}</main>
-      <Footer />
     </div>
   );
 }

@@ -1,14 +1,28 @@
 import React, { useState, useContext } from 'react';
 import CartContext from '../store/on-cart-context';
+import { AuthContext } from '../store/auth-context';
+import { Link } from 'react-router-dom';
 
 function Checkout() {
 	const [isCheckedOut, setIsCheckedOut] = useState(false);
 
+	const authCtx = useContext(AuthContext);
 	const cartCtx = useContext(CartContext);
 
 	const CheckoutHandler = () => {
 		setIsCheckedOut((current) => !current);
 	};
+
+	if (authCtx.isAuth == false) {
+		return (
+			<div className='flex justify-center items-center flex-col'>
+				<h1 className='font-bold text-4xl text-red-400 mx-20 my-10'>Please log in first</h1>
+				<button className="text-white bg-yellow-500 rounded-lg mx-20 my-28 p-10">
+					<Link to="/auth">Log In</Link>
+				</button>
+			</div>
+		);
+	}
 
 	if (isCheckedOut === true) {
 		cartCtx.onCart.length = 0;

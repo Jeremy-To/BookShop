@@ -1,11 +1,12 @@
 import { useContext } from 'react';
-
 import Card from '../ui/Card';
+import { AuthContext } from '../../store/auth-context';
 import CartContext from '../../store/on-cart-context';
 import RemoveButton from './RemoveItem';
 
 function Item(props) {
 	const cartCtx = useContext(CartContext);
+	const authCtx = useContext(AuthContext);
 
 	const itemIsOnCart = cartCtx.itemIsOnCart(props.id);
 
@@ -39,7 +40,7 @@ function Item(props) {
 					<button className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded" onClick={ItemIsOnCartHandler}>
 						{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
 					</button>
-					<RemoveButton itemId={props.id}/>
+				{authCtx.isAuth &&	<RemoveButton itemId={props.id}/>}
 				</div>
 			</Card>
 		</li>
