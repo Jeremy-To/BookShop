@@ -18,8 +18,8 @@ export const AuthContextProvider = ({ children }) => {
 		try {
 			const result = await createUserWithEmailAndPassword(auth, email, password);
       cookies.set('auth-token', result.user.refreshToken);
-      setIsAuth(true);
-      console.log('reussite');
+			setIsAuth(true);
+      setIsAuthenticated(true);
 		} catch (err) {
 			console.error(err);
 		}
@@ -29,6 +29,7 @@ export const AuthContextProvider = ({ children }) => {
 			const result = await signInWithPopup(auth, googleProvider);
 			cookies.set('auth-token', result.user.refreshToken);
 			setIsAuth(true);
+      setIsAuthenticated(true);
 		} catch (err) {
 			console.error(err);
 		}

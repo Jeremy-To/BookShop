@@ -13,7 +13,9 @@ function Checkout() {
 		setIsCheckedOut((current) => !current);
 	};
 
-	if (authCtx.isAuth == false) {
+	const total = cartCtx.totalPrice();
+
+	if (authCtx.isAuthenticated === false) {
 		return (
 			<div className='flex justify-center items-center flex-col'>
 				<h1 className='font-bold text-4xl text-red-400 mx-20 my-10'>Please log in first</h1>
@@ -176,6 +178,9 @@ function Checkout() {
 								/>
 							</div>
 						</form>
+					</div>
+					<div>
+						<p>Total: {total}$</p>
 					</div>
 				</div>
 				<div className="flex justify-center">

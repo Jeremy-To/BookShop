@@ -6,16 +6,15 @@ import Items from '../components/items/Items';
 function OnCartPage() {
 	const cartCtx = useContext(CartContext);
 
-	const totalPrice = Number(
-		cartCtx.onCart.reduce((acc, items) => acc + items.price, 0)
-	);
+	const totalOnCart = cartCtx.totalPrice();
+;
 	return (
 		<section className="flex flex-wrap justify-center items-center">
 			<div className="flex flex-col items-center flex-wrap">
 				<h1 className="lg:py-20 lg:p-10 mt-2 text-2xl font-bold ">My Cart</h1>
-				{totalPrice != 0 && (
+				{totalOnCart != 0 && (
 					<p className="m-8 p-10  rounded-md border-solid border-2">
-						Total: {totalPrice}$
+						Total: {totalOnCart}$
 					</p>
 				)}
 			</div>
