@@ -9,7 +9,6 @@ function OnCartPage() {
 	const totalPrice = Number(
 		cartCtx.onCart.reduce((acc, items) => acc + items.price, 0)
 	);
-
 	return (
 		<section className="flex flex-col flex-wrap justify-center items-center">
 			<div className="flex items-center justify-center flex-wrap">

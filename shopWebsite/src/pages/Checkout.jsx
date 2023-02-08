@@ -4,14 +4,14 @@ import CartContext from '../store/on-cart-context';
 function Checkout() {
 	const [isCheckedOut, setIsCheckedOut] = useState(false);
 
-    const cartCtx = useContext(CartContext);
+	const cartCtx = useContext(CartContext);
 
-    const CheckoutHandler =() => {
-        setIsCheckedOut(current => !current);
-    }
+	const CheckoutHandler = () => {
+		setIsCheckedOut((current) => !current);
+	};
 
 	if (isCheckedOut === true) {
-        cartCtx.onCart.length = 0;
+		cartCtx.onCart.length = 0;
 		return (
 			<div className="flex justify-center items-center h-full">
 				<h1 className="h-full mt-20 inline-block text-transparent bg-gradient-to-r from-yellow-600 via-orange-500 to-pink-600 bg-clip-text text-2xl my-8 mx-4 font-bold">
@@ -167,7 +167,7 @@ function Checkout() {
 					<button
 						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 						type="submit"
-                        onClick={CheckoutHandler}
+						onClick={CheckoutHandler}
 					>
 						Place Order
 					</button>

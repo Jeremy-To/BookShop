@@ -1,7 +1,5 @@
-import classes from './Card.module.css';
-
 function Card(props) {
-  return <div className={classes.card}>{props.children}</div>;
+  return <div className="w-full h-60 rounded-md flex">{props.children}</div>;
 }
 
 export default Card;
