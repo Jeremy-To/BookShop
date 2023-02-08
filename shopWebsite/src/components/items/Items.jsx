@@ -5,7 +5,7 @@ function Items(props) {
   
 	return (
 		<>
-			<ul className="list-none m-0 p-0 flex justify-center items-center">
+			<ul className="list-none m-0 p-0 flex flex-col justify-center items-center">
 				{props.items.map((item) => (
 					<Item
 						key={item.id}

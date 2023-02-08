@@ -5,15 +5,15 @@ import CartContext from '../../store/on-cart-context';
 import RemoveButton from './RemoveItem';
 
 function Item(props) {
-	const itemCtx = useContext(CartContext);
+	const cartCtx = useContext(CartContext);
 
-	const itemIsOnCart = itemCtx.itemIsOnCart(props.id);
+	const itemIsOnCart = cartCtx.itemIsOnCart(props.id);
 
 	const ItemIsOnCartHandler = () => {
 		if (itemIsOnCart) {
-			itemCtx.removeFromCart(props.id);
+			cartCtx.removeFromCart(props.id);
 		} else {
-			itemCtx.addOnCart({
+			cartCtx.addOnCart({
 				id: props.id,
 				title: props.title,
 				description: props.description,

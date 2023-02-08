@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 function Layout(props) {
   return (
-    <div>
+    <div className='w-full'>
       <Navbar />
       <main>{props.children}</main>
       <Footer />

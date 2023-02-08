@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
 	return (
 		<footer
-			className="w-full lg:h-10 h-16 flex items-center justify-between px-10 bottom-0 bg-blue-300 sm:relative lg:absolute"
+			className="w-full lg:h-10 h-16 flex items-center justify-between px-10 bottom-0 bg-blue-300"
 		>
 			<div className="italic">
 				<p>Shop App is the place to sell your books. </p>

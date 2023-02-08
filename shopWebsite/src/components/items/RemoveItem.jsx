@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RemoveButton = ({ itemId }) => {
 	const handleRemove = async () => {
@@ -17,7 +18,14 @@ const RemoveButton = ({ itemId }) => {
 		}
 	};
 
-	return <button className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded" onClick={handleRemove}>Remove</button>;
+	return (
+		<button
+			className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded"
+			onClick={handleRemove}
+		>
+			<Link to="/shop">Remove</Link>
+		</button>
+	);
 };
 
 export default RemoveButton;

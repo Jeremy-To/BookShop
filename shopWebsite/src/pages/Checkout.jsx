@@ -12,6 +12,7 @@ function Checkout() {
 
 	if (isCheckedOut === true) {
 		cartCtx.onCart.length = 0;
+		cartCtx.totalOnCart = 0;
 		return (
 			<div className="flex justify-center items-center h-full">
 				<h1 className="h-full mt-20 inline-block text-transparent bg-gradient-to-r from-yellow-600 via-orange-500 to-pink-600 bg-clip-text text-2xl my-8 mx-4 font-bold">
