@@ -90,14 +90,14 @@ function Navbar() {
 				</section>
 
 				<ul className="hidden space-x-8 lg:flex lg:items-center text-xl mr-4">
-					<li className="ml-10 text-white hover:text-orange-500 active:bg-orange-500 ">
+					<li className="ml-10 text-white hover:text-orange-500 active:bg-orange-200 active:rounded-md ">
 						<Link to="/shop">Shop</Link>
 					</li>
-					<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-500 ">
+					<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-200 active:rounded-md ">
 						<Link to="/about">About</Link>
 					</li>
 
-					<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-500 ">
+					<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-200 active:rounded-md ">
 						<Link to="/cart">My Cart</Link>
 						{cartCtx.totalOnCart > 0 && (
 							<span className="bg-blue-800 text-blue-50 rounded-md px-2 ml-2">
@@ -112,7 +112,7 @@ function Navbar() {
 					)}
 					{authCtx.isAuth && (
 						<>
-							<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-500">
+							<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-200 active:rounded-md ">
 								<Link to="/add-items">Add Item</Link>
 							</li>
 							<button
