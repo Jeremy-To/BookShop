@@ -24,23 +24,32 @@ function Item(props) {
 		}
 	};
 
-
 	return (
 		<li className="m-4 flex">
 			<Card>
-				<div className="shadow overflow-hidden rounded-md">
-					<img className='w-96 mx-auto object-cover' src={props.image} alt={props.title} />
+				<div className="shadow overflow-hidden rounded-md relative">
+					<img
+						className="w-96 mx-auto object-cover"
+						src={props.image}
+						alt={props.title}
+					/>
+						<b className='text-xl absolute top-3 right-2 bg-white rounded-md p-2'>{props.price} $</b>
 				</div>
-				<div className="shadow h-60 w-80 border-solid border-2 rounded-md flex flex-col justify-center items-center">
-					<h3 className='mx-2.5 text-xl'>{props.title}</h3>
-					<p className='italic ml-2'>{props.description}</p>
-					<b>{props.price} $</b>
-				</div>
-				<div className="flex flex-col justify-center">
-					<button className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded" onClick={ItemIsOnCartHandler}>
-						{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
-					</button>
-				{authCtx.isAuth &&	<RemoveButton itemId={props.id}/>}
+				<div className="shadow h-60 w-80 border-solid border-2 rounded-md flex flex-col justify-center">
+					<div className='flex items-center justify-evenly'>
+						<h3 className="mx-2 text-xl shadow">{props.title}</h3>
+			
+					</div>
+					<p className="italic mx-2 shadow my-2 lg:my-6">{props.description}</p>
+					<div className="flex flex-col justify-center">
+						<button
+							className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded my-1 mx-4"
+							onClick={ItemIsOnCartHandler}
+						>
+							{itemIsOnCart ? 'Remove from Cart' : 'To Cart'}
+						</button>
+						{authCtx.isAuth && <RemoveButton itemId={props.id} />}
+					</div>
 				</div>
 			</Card>
 		</li>

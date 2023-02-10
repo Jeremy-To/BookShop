@@ -112,7 +112,7 @@ function Navbar() {
 					)}
 					{authCtx.isAuth && (
 						<>
-							<li className="ml-10 hover:text-blue-500 active:text-blue-500">
+							<li className="ml-10 text-white  hover:text-orange-500 active:bg-orange-500">
 								<Link to="/add-items">Add Item</Link>
 							</li>
 							<button

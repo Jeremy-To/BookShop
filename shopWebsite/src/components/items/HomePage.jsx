@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function HomePage() {
 	return (
 		<section>
-			<div className="h-full flex relative flex-wrap justify-center items-center bg-[url('/Library.jpg')]">
+			<div className="h-full flex relative flex-wrap justify-center items-center">
 				<div className="flex flex-col justify-center items-center top-6 absolute rounded-md text-4xl bg-white p-2">
 					<h1>Welcome to my shop !</h1>
 				</div>

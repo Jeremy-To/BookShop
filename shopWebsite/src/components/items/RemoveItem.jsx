@@ -20,10 +20,10 @@ const RemoveButton = ({ itemId }) => {
 
 	return (
 		<button
-			className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded"
+			className="bg-transparent bg-red-300 text-gray-700 font-inherit hover:bg-red-500 py-2 px-4 rounded mb-2 mx-4"
 			onClick={handleRemove}
 		>
-			<Link to="/shop">Remove</Link>
+			<Link to="/">Remove from shop</Link>
 		</button>
 	);
 };

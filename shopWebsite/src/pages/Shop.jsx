@@ -40,7 +40,7 @@ function AllItemsPage() {
 	}
 
 	return (
-		<section className='flex justify-center'>
+		<section className='flex justify-center flex-wrap'>
 			<h1 className="font-bold text-2xl p-10">All Items</h1>
 			<Items items={loadedItems} />
 		</section>
