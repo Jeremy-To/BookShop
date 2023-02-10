@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
 function Layout(props) {
   return (
     <div className='w-full'>

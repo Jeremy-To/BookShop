@@ -12,8 +12,9 @@ const CartContext = createContext({
 export function CartContextProvider(props) {
   const [userCartItem, setUserCartItem] = useState([]);
 
-  const totalPrice = userCartItem.reduce((acc, items) => acc + Number(items.price), 0);
-
+  function totalPrice() {
+    return userCartItem.reduce((acc, items) => acc + Number(items.price), 0);
+  }
   function addOnCartHandler(cartItem) {
     setUserCartItem((prevUserCartItem) => {
       return prevUserCartItem.concat(cartItem);

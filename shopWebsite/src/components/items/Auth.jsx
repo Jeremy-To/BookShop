@@ -18,13 +18,13 @@ const Auth = () => {
   }
 
 	return (
-		<section className="">
+		<section className="px-8">
 			<div className="flex flex-col items-center">
 				<h1 className="inline-block text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-2xl my-8 font-bold">
 					With BookShop, share and sell the books that you loved
 				</h1>
 			</div>
-			<div className=" flex justify-center items-center rounded-md shadow my-5 mx-10">
+			<div className="flex flex-wrap justify-center items-center rounded-md shadow my-5 mx-10 p-20">
 				<div>
 					<button
 						className="mx-10 w-40 h-16 rounded-md cursor-pointer bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:text-white"
@@ -34,7 +34,7 @@ const Auth = () => {
 					</button>
 				</div>
         <div>
-          <p className='italic mr-10' >Or</p>
+          <p className='italic mr-10 m-2' >Or</p>
         </div>
 				<div className="flex items-center justify-center my-2">
 					<div>
