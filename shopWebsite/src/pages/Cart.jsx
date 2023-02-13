@@ -9,12 +9,12 @@ function OnCartPage() {
 	return (
 		<section className="flex flex-wrap justify-center ">
 			<div className="flex flex-col flex-wrap">
-				<h1 className="lg:py-20 lg:p-10 mt-2 text-2xl font-bold ">My Cart</h1>
+				<h1 className="lg:py-20 lg:p-10 mt-2 text-2xl font-serif ">My Cart</h1>
 			</div>
 			<div>
 				{cartCtx.totalOnCart === 0 ? (
 					<div className="flex flex-col justify-center items-center">
-						<p className="p-10">
+						<p className="p-10 font-serif">
 							You got no items on cart yet. Start adding some?
 						</p>
 						<button className="text-white bg-yellow-500 rounded-lg w-24 h-10">

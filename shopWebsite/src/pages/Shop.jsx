@@ -41,7 +41,7 @@ function AllItemsPage() {
 
 	return (
 		<section className='flex justify-center flex-wrap'>
-			<h1 className="font-bold text-2xl p-10">All Items</h1>
+			<h1 className="font-serif text-2xl p-10">All Items</h1>
 			<Items items={loadedItems} />
 		</section>
 	);

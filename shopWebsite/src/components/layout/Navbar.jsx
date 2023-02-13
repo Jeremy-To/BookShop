@@ -19,7 +19,7 @@ function Navbar() {
 	}
 	return (
 		<div className="flex items-center justify-between border-b border-gray-400 py-8 bg-blue-500">
-			<div className="text-4xl text-white font-bold pl-4 hover:text-orange-500">
+			<div className="font-serif text-4xl text-white font-bold pl-4 hover:text-orange-500">
 				<Link to="/">BookShop</Link>
 			</div>
 			<nav>

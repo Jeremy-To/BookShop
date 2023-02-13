@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ['Inconsolata', 'monospace'],
+			serif: 'Playfair Display, serif',
 		},
 	},
 	plugins: [],
