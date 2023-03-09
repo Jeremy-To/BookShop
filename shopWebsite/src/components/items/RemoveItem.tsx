@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const RemoveButton = ({ itemId }) => {
+interface RemoveButtonProps {
+	itemId: number;
+}
+
+const RemoveButton = ({ itemId }: RemoveButtonProps) => {
 	const handleRemove = async () => {
 		try {
 			await fetch(

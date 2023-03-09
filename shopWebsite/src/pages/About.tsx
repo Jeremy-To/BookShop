@@ -1,5 +1,3 @@
-import React from 'react';
-
 function About() {
 	return (
 		<section className="m-4 md:m-30 lg:m-40 flex flex-col items-center p-10 border-solid rounded-md border-blue-300 border-2">

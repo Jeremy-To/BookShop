@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 
+import { CartItemType } from '../store/on-cart-context';
 import Items from '../components/items/Items';
 
-function AllItemsPage() {
+function Shop() {
 	const [isLoading, setIsLoading] = useState(true);
-	const [loadedItems, setLoadedItems] = useState([]);
+	const [loadedItems, setLoadedItems] = useState<CartItemType[]>([]);
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -40,11 +41,11 @@ function AllItemsPage() {
 	}
 
 	return (
-		<section className='flex justify-center flex-wrap'>
+		<section className="flex justify-center flex-wrap">
 			<h1 className="font-serif text-2xl p-10">All Items</h1>
 			<Items items={loadedItems} />
 		</section>
 	);
 }
 
-export default AllItemsPage;
+export default Shop;

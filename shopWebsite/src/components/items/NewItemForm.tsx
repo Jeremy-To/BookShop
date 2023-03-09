@@ -1,18 +1,27 @@
-import { useRef } from 'react';
+import { useRef, FormEvent } from 'react';
 
-function NewItemForm(props) {
-	const nameInputRef = useRef();
-	const imageInputRef = useRef();
-	const priceInputRef = useRef();
-	const descriptionInputRef = useRef();
+interface NewItemFormProps {
+	onAddMeetup: (itemData: {
+		title: string;
+		image: string;
+		price: number;
+		description: string;
+	}) => void;
+}
 
-	function submitHandler(event) {
+function NewItemForm(props: NewItemFormProps) {
+	const nameInputRef = useRef<HTMLInputElement>(null);
+	const imageInputRef = useRef<HTMLInputElement>(null);
+	const priceInputRef = useRef<HTMLInputElement>(null);
+	const descriptionInputRef = useRef<HTMLTextAreaElement>(null);
+
+	function submitHandler(event: FormEvent) {
 		event.preventDefault();
 
-		const enteredTitle = nameInputRef.current.value;
-		const enteredImage = imageInputRef.current.value;
-		const enteredPrice = priceInputRef.current.value;
-		const enteredDescription = descriptionInputRef.current.value;
+		const enteredTitle = nameInputRef.current!.value;
+		const enteredImage = imageInputRef.current!.value;
+		const enteredPrice = +priceInputRef.current!.value;
+		const enteredDescription = descriptionInputRef.current!.value;
 
 		const itemData = {
 			title: enteredTitle,
@@ -73,7 +82,7 @@ function NewItemForm(props) {
 					className="block w-full p-0.25 rounded border border-gray-300 appearance-none leading-normal"
 					id="description"
 					required
-					rows="5"
+					rows={5}
 					ref={descriptionInputRef}
 				></textarea>
 			</div>

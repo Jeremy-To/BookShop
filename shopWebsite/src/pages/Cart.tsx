@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import CartContext from '../store/on-cart-context';
 import Items from '../components/items/Items';
 
-function OnCartPage() {
+function Cart() {
 	const cartCtx = useContext(CartContext);
 
 	return (
@@ -29,7 +29,7 @@ function OnCartPage() {
 								<Link to="/checkout">Pay Here</Link>
 							</button>
 							<p className="m-8 p-2 text-center rounded-md border-solid border-2">
-								Total: {cartCtx.totalPrice()}$
+								Total: {cartCtx.totalPrice}$
 							</p>
 						</div>
 					</div>
@@ -39,4 +39,4 @@ function OnCartPage() {
 	);
 }
 
-export default OnCartPage;
+export default Cart;

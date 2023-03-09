@@ -1,8 +1,10 @@
-import Item from './Item';
+import Item, { ItemProps } from './Item';
 
-function Items(props) {
-	
-  
+interface ItemsProps {
+	items: ItemProps[];
+}
+
+function Items(props: ItemsProps) {
 	return (
 		<>
 			<ul className="list-none m-0 p-0 flex flex-col justify-center items-center">

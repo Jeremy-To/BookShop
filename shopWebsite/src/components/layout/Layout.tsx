@@ -1,5 +1,10 @@
 import Navbar from "./Navbar";
-function Layout(props) {
+
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+function Layout(props : LayoutProps) {
   return (
     <div className='w-full'>
       <Navbar />

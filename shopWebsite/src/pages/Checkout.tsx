@@ -13,7 +13,7 @@ function Checkout() {
 		setIsCheckedOut((current) => !current);
 	};
 
-	const total = cartCtx.totalPrice();
+	const total = cartCtx.totalPrice;
 
 	if (authCtx.isAuthenticated === false) {
 		return (
